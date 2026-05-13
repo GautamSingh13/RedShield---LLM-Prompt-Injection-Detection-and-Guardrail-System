@@ -2,35 +2,35 @@ RedShield: LLM Prompt Injection Detection & Guardrail System
 
 RedShield is a lightweight, modular security framework designed to protect Large Language Model (LLM) applications from malicious prompt injection attacks. It acts as an intelligent intermediary, analyzing and sanitizing user prompts before they reach the LLM.
 
-🛡️ Key Features
+🛡️ Key Features :
 
-Jailbreak Detection: Identifies DAN-style and structural bypass attempts.
+--Jailbreak Detection: Identifies DAN-style and structural bypass attempts.
 
-Multi-Stage Filtering Engine:
+--Multi-Stage Filtering Engine:
 
-Regex Analysis: Matches direct malicious keywords and patterns.
+--Regex Analysis: Matches direct malicious keywords and patterns.
 
-Entropy Measurement: Detects suspicious randomness or obfuscated payloads.
+--Entropy Measurement: Detects suspicious randomness or obfuscated payloads.
 
-Base64 Decoding: Automatically detects and analyzes hidden encoded strings.
+--Base64 Decoding: Automatically detects and analyzes hidden encoded strings.
 
-Automatic Sanitization: Strips risky patterns while preserving safe portions of the input.
+--Automatic Sanitization: Strips risky patterns while preserving safe portions of the input.
 
-Flexible Integration: Designed to work with Grok, OpenAI, Cohere, and HuggingFace models.
+--Flexible Integration: Designed to work with Grok, OpenAI, Cohere, and HuggingFace models.
 
-🏗️ System Architecture
+🏗️ System Architecture :
 
-RedShield utilizes a modular workflow to ensure safe AI interactions:
+--RedShield utilizes a modular workflow to ensure safe AI interactions:
 
-User / Client: Sends a prompt request through client.py.
+--User / Client: Sends a prompt request through client.py.
 
-API Layer: run.py (FastAPI) receives the request and forwards it to the detection system.
+--API Layer: run.py (FastAPI) receives the request and forwards it to the detection system.
 
-Detection Engine: Located in core/, it runs regex filters, entropy checks, and embedding analysis.
+--Detection Engine: Located in core/, it runs regex filters, entropy checks, and embedding analysis.
 
-Guardrail Layer: Categorizes input as SAFE, SANITIZED, or BLOCKED.
+--Guardrail Layer: Categorizes input as SAFE, SANITIZED, or BLOCKED.
 
-LLM Interaction: Generates a safe response only after the prompt is cleared.
+--LLM Interaction: Generates a safe response only after the prompt is cleared.
 
 📂 Project Structure
 ```
@@ -62,11 +62,10 @@ pip install -r requirements.txt
 
 2. Configure Environment
 
-# Create a .env file in the root directory
-# Add your key inside:
-```bash
-GROQ_API_KEY=your_api_key_here
+# Create a .env file in the root directory and add your API key into it
+```bash echo "GROQ_API_KEY=your_api_key_here" > .env
 ```
+
 
 3. Running the System
 
