@@ -33,12 +33,14 @@ Guardrail Layer: Categorizes input as SAFE, SANITIZED, or BLOCKED.
 LLM Interaction: Generates a safe response only after the prompt is cleared.
 
 📂 Project Structure
+```
 /api      - FastAPI application logic
 /config   - App configuration and settings
 /core     - Detection and sanitization logic
 /tests    - Security test cases
 client.py - Interactive test client
 run.py    - Main entry point
+```
 
 
 🚀 Getting Started
