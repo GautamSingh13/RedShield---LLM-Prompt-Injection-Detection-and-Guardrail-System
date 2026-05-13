@@ -93,4 +93,4 @@ Format Manipulation: Leetspeak, whitespace injection, and Base64 encoding.
 
 Command Execution: Attempts to execute shell commands like rm -rf /.
 
-Developed as a robust security layer for AI-driven applications.
+**Developed as a robust security layer for AI-driven applications.**
