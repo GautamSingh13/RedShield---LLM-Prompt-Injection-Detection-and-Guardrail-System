@@ -5,67 +5,60 @@ RedShield is a lightweight, modular security framework designed to protect Large
 **🛡️ Key Features :**
 
 --Jailbreak Detection: Identifies DAN-style and structural bypass attempts.
-
 --Multi-Stage Filtering Engine:
-
---Regex Analysis: Matches direct malicious keywords and patterns.
-
---Entropy Measurement: Detects suspicious randomness or obfuscated payloads.
-
---Base64 Decoding: Automatically detects and analyzes hidden encoded strings.
-
+     --Regex Analysis: Matches direct malicious keywords and patterns.
+     --Entropy Measurement: Detects suspicious randomness or obfuscated payloads.
+     --Base64 Decoding: Automatically detects and analyzes hidden encoded strings.
 --Automatic Sanitization: Strips risky patterns while preserving safe portions of the input.
-
 --Flexible Integration: Designed to work with Grok, OpenAI, Cohere, and HuggingFace models.
 
 **🏗️ System Architecture :**
-
---RedShield utilizes a modular workflow to ensure safe AI interactions:
+RedShield utilizes a modular workflow to ensure safe AI interactions:
 
 --User / Client: Sends a prompt request through client.py.
-
 --API Layer: run.py (FastAPI) receives the request and forwards it to the detection system.
-
 --Detection Engine: Located in core/, it runs regex filters, entropy checks, and embedding analysis.
-
 --Guardrail Layer: Categorizes input as SAFE, SANITIZED, or BLOCKED.
-
 --LLM Interaction: Generates a safe response only after the prompt is cleared.
 
 **📂 Project Structure**
 ```
-/api      - FastAPI application logic
-/config   - App configuration and settings
-/core     - Detection and sanitization logic
-/tests    - Security test cases
-client.py - Interactive test client
-run.py    - Main entry point
+├── api/
+│   └── main.py          # FastAPI application & endpoint logic
+├── core/
+│   ├── detection.py     # Main detection logic & regex patterns
+│   └── sanitization.py  # Logic for cleaning & neutralizing prompts
+├── config/
+│   └── settings.py      # App configuration (Host, Port, API Keys)
+├── client.py            # Interactive CLI test client
+├── run.py               # Application entry point
+└── requirements.txt     # Project dependencies
 ```
 
 
-🚀 Getting Started
-# Clone the repository
+# 🚀 Getting Started
+**1.Clone the repository**
 ```bash
 git clone https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git
 ```
-# Navigate to the project folder
+**2.Navigate to the project folder**
 ```bash
 cd "RedShield - LLM Prompt Injection Detection and Guardrail System"
 ```
-# Install required dependencies
+**3.Install required dependencies**
 ```bash
 pip install -r requirements.txt
 ```
-# Create a .env file in the root directory and add your API key into it
+**4.Create a .env file in the root directory and add your API key into it**
 ```bash echo "GROQ_API_KEY=your_api_key_here" > .env
 ```
-**Terminal 1 (Start the API server):**
+**5.Terminal 1 (Start the API server):**
 
 ```bash
 python run.py
 ```
 
-**Terminal 2 (Start the interactive client):**
+**6.Terminal 2 (Start the interactive client):**
 
 ```bash
 python client.py
