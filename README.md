@@ -33,17 +33,12 @@ Guardrail Layer: Categorizes input as SAFE, SANITIZED, or BLOCKED.
 LLM Interaction: Generates a safe response only after the prompt is cleared.
 
 📂 Project Structure
-
-├── api/
-│   └── main.py          # FastAPI application & endpoint logic
-├── core/
-│   ├── detection.py     # Main detection logic & regex patterns
-│   └── sanitization.py  # Logic for cleaning & neutralizing prompts
-├── config/
-│   └── settings.py      # App configuration (Host, Port, API Keys)
-├── client.py            # Interactive CLI test client
-├── run.py               # Application entry point
-└── requirements.txt     # Project dependencies
+/api      - FastAPI application logic
+/config   - App configuration and settings
+/core     - Detection and sanitization logic
+/tests    - Security test cases
+client.py - Interactive test client
+run.py    - Main entry point
 
 
 🚀 Getting Started
@@ -54,7 +49,7 @@ LLM Interaction: Generates a safe response only after the prompt is cleared.
 git clone [https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git](https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git)
 
 # Navigate to the project folder
-cd "RedShield - LLM Prompt Injection Detection and Guardrail System"
+``cd "RedShield - LLM Prompt Injection Detection and Guardrail System"
 
 # Install required dependencies
 pip install -r requirements.txt
