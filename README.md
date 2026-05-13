@@ -46,32 +46,32 @@ run.py    - Main entry point
 1. Clone and Install
 
 # Clone the repository
-git clone [https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git](https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git)
+```bash git clone [https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git](https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git)
 
 # Navigate to the project folder
-``cd "RedShield - LLM Prompt Injection Detection and Guardrail System"
+```bash cd "RedShield - LLM Prompt Injection Detection and Guardrail System"
 
 # Install required dependencies
-pip install -r requirements.txt
+```bash pip install -r requirements.txt
 
 
 2. Configure Environment
 
 # Create a .env file in the root directory
 # Add your key inside:
-GROQ_API_KEY=your_api_key_here
+```bash GROQ_API_KEY=your_api_key_here
 
 
 3. Running the System
 
 Terminal 1 (Start the API server):
 
-python run.py
+```bash python run.py
 
 
 Terminal 2 (Start the interactive client):
 
-python client.py
+```bash python client.py
 
 
 🧪 Supported Attack Detection
