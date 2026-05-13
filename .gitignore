@@ -1,0 +1,13 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Environments
+.env
+myenv/
+venv/
+env/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
