@@ -49,7 +49,7 @@ run.py    - Main entry point
 
 # Clone the repository
 ```bash
-git clone [https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git](https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git)
+git clone https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git
 ```
 # Navigate to the project folder
 ```bash
