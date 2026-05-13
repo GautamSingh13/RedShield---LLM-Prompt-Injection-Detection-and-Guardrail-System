@@ -1,8 +1,8 @@
-RedShield: LLM Prompt Injection Detection & Guardrail System
+# RedShield: LLM Prompt Injection Detection & Guardrail System
 
 RedShield is a lightweight, modular security framework designed to protect Large Language Model (LLM) applications from malicious prompt injection attacks. It acts as an intelligent intermediary, analyzing and sanitizing user prompts before they reach the LLM.
 
-🛡️ Key Features :
+**🛡️ Key Features :**
 
 --Jailbreak Detection: Identifies DAN-style and structural bypass attempts.
 
@@ -18,7 +18,7 @@ RedShield is a lightweight, modular security framework designed to protect Large
 
 --Flexible Integration: Designed to work with Grok, OpenAI, Cohere, and HuggingFace models.
 
-🏗️ System Architecture :
+**🏗️ System Architecture :**
 
 --RedShield utilizes a modular workflow to ensure safe AI interactions:
 
@@ -32,7 +32,7 @@ RedShield is a lightweight, modular security framework designed to protect Large
 
 --LLM Interaction: Generates a safe response only after the prompt is cleared.
 
-📂 Project Structure
+**📂 Project Structure**
 ```
 /api      - FastAPI application logic
 /config   - App configuration and settings
@@ -44,9 +44,6 @@ run.py    - Main entry point
 
 
 🚀 Getting Started
-
-1. Clone and Install
-
 # Clone the repository
 ```bash
 git clone https://github.com/GautamSingh13/RedShield---LLM-Prompt-Injection-Detection-and-Guardrail-System.git
@@ -59,29 +56,22 @@ cd "RedShield - LLM Prompt Injection Detection and Guardrail System"
 ```bash
 pip install -r requirements.txt
 ```
-
-2. Configure Environment
-
 # Create a .env file in the root directory and add your API key into it
 ```bash echo "GROQ_API_KEY=your_api_key_here" > .env
 ```
-
-
-3. Running the System
-
-Terminal 1 (Start the API server):
+**Terminal 1 (Start the API server):**
 
 ```bash
 python run.py
 ```
 
-Terminal 2 (Start the interactive client):
+**Terminal 2 (Start the interactive client):**
 
 ```bash
 python client.py
 ```
 
-🧪 Supported Attack Detection
+**🧪 Supported Attack Detection**
 
 RedShield is tested against a wide variety of adversarial prompts:
 
